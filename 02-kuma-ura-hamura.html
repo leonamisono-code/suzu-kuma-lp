@@ -25,6 +25,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       linear-gradient(160deg, #cdeee7 0%, #eaf8f5 35%, #f5fbf9 60%, #e2f5f0 100%);
     background-attachment: fixed;
   }
+  /* トップバナー1行化 */
+  .top-banner-inner {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+  .top-banner-label {
+    white-space: nowrap;
+    font-size: 12px !important;
+    flex-shrink: 0;
+  }
+  .top-banner-cta {
+    white-space: nowrap;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    flex-shrink: 0;
+  }
+
   /* 画像の色味に合わせたCSS変数上書き */
   :root {
     --bg-soft:   #edf8f5;
