@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MRRD8PD');</script>
 <!-- End Google Tag Manager -->
-<meta name="description" content="目の下のクマ・たるみが気になる方へ。形成外科専門医が裏ハムラ法で傷跡を残さず根本改善。広島駅徒歩5分のすず美容形成外科医院。" />
+<meta name="description" content="目の下のクマ・たるみが気になる方へ。形成外科専門医が裏ハムラ法で傷跡を残さず根本改善。広島・八丁堀のすず美容形成外科医院。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" />
@@ -42,6 +42,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 11px !important;
     padding: 6px 10px !important;
     flex-shrink: 0;
+  }
+
+  /* 料金表：モバイル横スクロール */
+  @media (max-width: 767px) {
+    .price-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .price-row.four-col,
+    .price-table .head.four-col {
+      min-width: 400px;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+      display: grid !important;
+      gap: 4px 8px;
+    }
+    .price-table .head.four-col { display: grid !important; }
+    .price-row.four-col .reg,
+    .price-row.four-col .camp,
+    .price-row.four-col .camp40,
+    .price-row.four-col .camp30 { text-align: center !important; }
+    .price-row .reg::before,
+    .price-row .camp::before { content: "" !important; }
   }
 
   /* styles.css の display:none オーバーライド（クマLP用） */
@@ -389,7 +408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap-narrow">
     <div class="section-head fade-in">
       <span class="eyebrow">PRICE</span>
-      <h2 class="ja">明朗な<span class="hi">料金</span>体系</h2>
+      <h2 class="ja">モニター<span class="hi">料金</span></h2>
     </div>
     <div class="price-table fade-in">
       <div class="price-row four-col head">
@@ -605,7 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <dd>〒730-0017<br />広島県広島市中区鉄砲町10-13<br />八丁堀伊藤久芳堂ビル 6F</dd>
 
           <dt>ACCESS</dt>
-          <dd>広島駅より徒歩約5分。<br />広島電鉄 八丁堀電停より徒歩1分。<br /><span style="font-size:12px; color:var(--ink-500);">※ヤマダ電機（旧天満屋）向かい</span></dd>
+          <dd>広島電鉄 八丁堀電停より徒歩1分。<br /><span style="font-size:12px; color:var(--ink-500);">※ヤマダ電機（旧天満屋）向かい</span></dd>
 
           <dt>TEL</dt>
           <dd><a href="tel:0822226671" style="font-family: var(--serif); font-size: 26px; color: var(--pink-accent); letter-spacing: 0.04em;">082-222-6671</a><br /><span style="font-size:12px; color:var(--ink-500); line-height:1.7;">電話受付：火〜金 10:00〜18:00／土 10:00〜17:30</span></dd>
