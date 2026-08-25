@@ -26,6 +26,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background-attachment: fixed;
   }
 
+  /* トップバナー：2段レイアウト */
+  .top-banner { padding: 8px 14px 10px !important; }
+  .top-banner-inner {
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 6px 6px !important;
+  }
+  .top-banner-label {
+    font-size: 13px !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .top-banner-countdown {
+    flex: 1 !important;
+    font-size: 12px !important;
+    justify-content: flex-end !important;
+    gap: 2px !important;
+  }
+  .top-banner-countdown .tb-seg { padding: 2px 5px !important; }
+  .top-banner-cta {
+    flex: 0 0 100% !important;
+    text-align: center !important;
+    padding: 8px 20px !important;
+    font-size: 13px !important;
+    border-radius: 20px !important;
+    letter-spacing: 0.05em;
+  }
+
   /* 料金表：モバイル横スクロール */
   @media (max-width: 767px) {
     .price-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
