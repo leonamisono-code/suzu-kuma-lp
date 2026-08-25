@@ -44,6 +44,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-shrink: 0;
   }
 
+  /* styles.css の display:none オーバーライド（クマLP用） */
+  .campaign-bar    { display: block !important; }
+  .section.tight   { display: block !important; }
+  #price-section   { display: block !important; }
+  #strengths-section { display: block !important; }
+
   /* 画像の色味に合わせたCSS変数上書き */
   :root {
     --bg-soft:   #edf8f5;
