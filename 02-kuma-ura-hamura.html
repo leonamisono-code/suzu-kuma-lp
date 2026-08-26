@@ -85,6 +85,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .price-row.four-col .name .small { font-size: 10px !important; }
   }
 
+  /* モバイル専用：SP改行・フッターCTA */
+  @media (max-width: 767px) {
+    .sp-br { display: inline; }
+    .cta-band-desc { text-align: center !important; max-width: 280px; margin: 16px auto 0 !important; }
+  }
+  @media (min-width: 768px) {
+    .sp-br { display: none; }
+    .cta-band-desc { margin-top: 16px; }
+  }
+
   /* styles.css の display:none オーバーライド（クマLP用） */
   .campaign-bar    { display: block !important; }
   .section.tight   { display: block !important; }
@@ -454,7 +464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="strength-grid">
       <article class="strength-card fade-in">
         <span class="num"><span class="l">STRENGTH</span><span class="n">01</span></span>
-        <h3>形成外科専門医として<br>眼窩・涙袋の解剖を熟知</h3>
+        <h3>形成外科専門医として<span class="sp-br"><br></span>眼窩・涙袋の解剖を熟知</h3>
         <p>形成外科の専門訓練で、眼窩脂肪・筋肉・靭帯の構造を熟知。クマの種類と程度を医学的に診断し、裏ハムラ法・皮膚切除+ハムラ法・経結膜脱脂を適切に使い分けられる。</p>
       </article>
       <article class="strength-card fade-in">
@@ -656,7 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-band" id="contact">
   <div class="wrap inner">
     <h2>目の下のクマ・たるみ、<br />まずは無料カウンセリングから。</h2>
-    <p style="text-align:center; max-width:280px; margin:16px auto 0;">形成外科専門医が、あなたに最適な施術をご提案します。</p>
+    <p class="cta-band-desc">形成外科専門医が、あなたに最適な施術をご提案します。</p>
     <a href="#booking" class="cta">今すぐ無料カウンセリングを予約</a>
     <p style="margin-top:14px; font-size:12px; opacity:0.9; letter-spacing:0.1em;">カウンセリング完全無料 ・ 契約不要</p>
   </div>
