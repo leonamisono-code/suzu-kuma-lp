@@ -57,23 +57,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
 
-  /* 料金表：モバイル横スクロール */
+  /* 料金表：モバイル 通常価格列を非表示 → 3列で一画面に収める */
   @media (max-width: 767px) {
-    .price-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .price-table { overflow-x: unset; }
     .price-row.four-col,
     .price-table .head.four-col {
-      min-width: 400px;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+      min-width: unset !important;
+      grid-template-columns: 1.8fr 1fr 1fr !important;
       display: grid !important;
-      gap: 4px 8px;
+      gap: 4px 6px;
     }
     .price-table .head.four-col { display: grid !important; }
-    .price-row.four-col .reg,
+    /* 通常価格列を非表示（データ行・ヘッダ行） */
+    .price-row.four-col .reg { display: none !important; }
+    .price-table .head.four-col > div:nth-child(2) { display: none !important; }
     .price-row.four-col .camp,
     .price-row.four-col .camp40,
     .price-row.four-col .camp30 { text-align: center !important; }
     .price-row .reg::before,
     .price-row .camp::before { content: "" !important; }
+    .price-row.four-col { padding: 16px 12px; }
+    .price-row.four-col .badge { font-size: 10px !important; padding: 2px 5px !important; }
+    .price-row.four-col .camp .num,
+    .price-row.four-col .camp40 .num,
+    .price-row.four-col .camp30 .num { font-size: 16px !important; }
+    .price-row.four-col .name { font-size: 12px !important; }
+    .price-row.four-col .name .small { font-size: 10px !important; }
   }
 
   /* styles.css の display:none オーバーライド（クマLP用） */
@@ -197,14 +206,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============== Campaign Notice Bar ============== -->
-<div class="campaign-bar">
-  <div class="campaign-bar-inner">
-    <div class="campaign-bar-top">
-      <span class="campaign-bar-badge">モニター限定 最大50%OFF</span>
-      <span class="campaign-bar-text"><strong>10名限定モニター募集中</strong> <span class="campaign-bar-period">残り枠わずか</span></span>
-    </div>
-    <a href="#booking" class="campaign-bar-cta">今すぐ無料カウンセリングを予約 ›</a>
-  </div>
+<div class="campaign-bar" style="padding: 10px 16px;">
+  <a href="#booking" class="campaign-bar-cta" style="max-width:100%; margin:0;">無料カウンセリングはこちら ›</a>
 </div>
 
 <!-- ============== Worries ============== -->
@@ -241,11 +244,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- Treatment cards: PC 3col grid / SP single col -->
   <div class="tx-cards-wrap">
-    <div class="px-4 py-4 flex flex-col items-center">
+    <div class="px-4 py-0 flex flex-col items-center">
       <article class="tx-cards-grid gap-8">
 
         <!-- Header -->
-        <header class="text-center mb-4 animate-entrada" style="--delay:1;">
+        <header class="text-center animate-entrada" style="--delay:1;">
           <span class="font-sans-jp text-[10px] tracking-widest mb-3 block" style="color:rgba(90,181,160,0.8); letter-spacing:0.3em;">— MENU —</span>
           <h2 class="font-mincho text-2xl tracking-widest relative inline-block" style="color:#2d2d2d;">
             モニターメニュー
@@ -398,26 +401,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ============== Campaign ============== -->
-<section class="section tight">
-  <div class="wrap-narrow">
-    <div class="campaign">
-      <div class="stamp">
-        <span class="small">MAX</span>
-        <span class="big">50<span style="font-size:18px;">%</span></span>
-        <span class="off">OFF</span>
-      </div>
-      <div>
-        <span class="lead">MONITOR LIMITED OFFER</span>
-        <h3>各施術<span style="color:var(--pink-accent);">10名限定</span>モニター募集中</h3>
-        <div class="period">
-          <span class="label">割引</span>全顔モニター最大50%OFF・部分モニター最大40%OFF
-        </div>
-        <p style="margin-top:10px; font-size:12px; color:var(--ink-500);">※ 定員に達し次第、募集を終了いたします。</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============== Pricing table ============== -->
 <section class="section soft" id="price-section">
@@ -471,7 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="strength-grid">
       <article class="strength-card fade-in">
         <span class="num"><span class="l">STRENGTH</span><span class="n">01</span></span>
-        <h3>形成外科専門医として眼窩・涙袋の解剖を熟知</h3>
+        <h3>形成外科専門医として<br>眼窩・涙袋の解剖を熟知</h3>
         <p>形成外科の専門訓練で、眼窩脂肪・筋肉・靭帯の構造を熟知。クマの種類と程度を医学的に診断し、裏ハムラ法・皮膚切除+ハムラ法・経結膜脱脂を適切に使い分けられる。</p>
       </article>
       <article class="strength-card fade-in">
@@ -673,7 +656,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-band" id="contact">
   <div class="wrap inner">
     <h2>目の下のクマ・たるみ、<br />まずは無料カウンセリングから。</h2>
-    <p>形成外科専門医が、あなたに最適な施術をご提案します。</p>
+    <p style="text-align:center; max-width:280px; margin:16px auto 0;">形成外科専門医が、あなたに最適な施術をご提案します。</p>
     <a href="#booking" class="cta">今すぐ無料カウンセリングを予約</a>
     <p style="margin-top:14px; font-size:12px; opacity:0.9; letter-spacing:0.1em;">カウンセリング完全無料 ・ 契約不要</p>
   </div>
