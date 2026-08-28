@@ -95,6 +95,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .cta-band-desc { margin-top: 16px; }
   }
 
+  /* eyebrow: 画像の — TEXT — スタイルに統一 */
+  .eyebrow {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.2em !important;
+    font-size: 13px !important;
+    color: #5ab5a0 !important;
+  }
+  .eyebrow::before { content: "— "; }
+  .eyebrow::after  { content: " —"; }
+
   /* styles.css の display:none オーバーライド（クマLP用） */
   .campaign-bar    { display: block !important; }
   .section.tight   { display: block !important; }
